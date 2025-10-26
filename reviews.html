@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Client Reviews | Sambhanvan</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <img src="logo.jpg" alt="Business logo" />
+    </a>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="eventshowcase.html">Event Showcase</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="reviews-section">
+    <h1>Client Reviews</h1>
+    <div class="reviews-container">
+      <div class="review-box">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.1eLuovnhTLI8WopgYvpgpwHaJ1?pid=Api&P=0&h=180" alt="Reviewer 1">
+        <h3>Rajesh Kumar</h3>
+        <div class="rating" data-rating="5"></div>
+        <p>"Our wedding event was beautifully organized! Decorations and arrangements were outstanding."</p>
+      </div>
+
+      <div class="review-box">
+        <img src="https://img.freepik.com/premium-photo/headshot-photos-indian-women-dynamic-professions-occassions-indian-girl_978786-295.jpg?w=2000" alt="Reviewer 2">
+        <h3>Priya Sharma</h3>
+        <div class="rating" data-rating="4"></div>
+        <p>"Amazing theme party setup! The team handled everything perfectly. Highly recommended."</p>
+      </div>
+
+      <div class="review-box">
+        <img src="https://r2.erweima.ai/imgcompressed/img/compressed_bc3b9e2e7583717ff772a3ebc1faec48.webp" alt="Reviewer 3">
+        <h3>Amit Verma</h3>
+        <div class="rating" data-rating="5"></div>
+        <p>"Our corporate event went smoothly. Very professional service and great attention to detail."</p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf0;
+  color: #333;
+}
+
+/* Header & Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8b0000;
+  padding: 0.5rem 1rem;
+}
+
+.logo img {
+  border-radius: 50%;
+  height: 60px;
+  width: auto;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar a{
+  font-weight: 600;
+  padding:10px 20px;
+  font-size: 1rem;
+  color:#fff;
+  transition:0.3s;
+  position:relative;
+  text-decoration: none;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+    .reviews-section {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .reviews-section h1 {
+      color: #8b0000;
+      margin-bottom: 2rem;
+    }
+
+    .reviews-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .review-box {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .review-box:hover {
+      transform: scale(1.05);
+    }
+
+    .review-box img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .review-box h3 {
+      color: #ff6600;
+      margin-bottom: 10px;
+    }
+
+    .review-box p {
+      color: #555;
+      font-size: 15px;
+    }
+
+    .rating {
+      color: #ffd700;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  </style>
+
+  <script>
+    const boxes = document.querySelectorAll('.review-box');
+
+    boxes.forEach(box => {
+      const ratingDiv = box.querySelector('.rating');
+      const rating = parseInt(ratingDiv.getAttribute('data-rating'));
+      let stars = '';
+      for (let i = 0; i < rating; i++) {
+        stars += '★';
+      }
+      for (let i = rating; i < 5; i++) {
+        stars += '☆';
+      }
+      ratingDiv.innerHTML = stars;
+    });
+  </script>
+</body>
+</html>

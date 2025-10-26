@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Event</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      background: url('movie.jpg') no-repeat center center/cover;
+      color: white;
+    }
+
+    header {
+      background-color: #8b0000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    .navbar a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: width 0.3s;
+    }
+
+    .navbar a:hover::after {
+      width: 100%;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      width: 100%;
+      padding-top: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .content-wrapper {
+      padding: 40px 30px;
+    }
+
+    .heading {
+      max-width: 60%;
+    }
+
+    .heading h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #ffd700;
+    }
+
+    .heading p {
+      font-size: 1rem;
+      line-height: 1.5;
+      max-width: 600px;
+    }
+
+    .form-section {
+      position: absolute;
+      top: 120px;
+      right: 30px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 280px;
+      width: 100%;
+      font-size: 0.85rem;
+    }
+
+    .form-section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 8px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 6px;
+      font-size: 0.85rem;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .form-group button {
+      background-color: #27ae60;
+      color: white;
+      cursor: pointer;
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .form-group button:hover {
+      background-color: #2ecc71;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 4px 6px;
+      border-radius: 5px;
+      font-size: 0.75rem;
+    }
+
+    .bottom-section {
+      display: flex;
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .services-section, .location-section {
+      max-width: 260px;
+    }
+
+    .services-section h2, .location-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #ffd700;
+    }
+
+    .services-list {
+      list-style-type: square;
+      padding-left: 20px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .location-text {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .form-section,
+      .bottom-section {
+        position: static;
+        margin: 20px auto;
+      }
+
+      .bottom-section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo"><img src="logo.jpg" alt="Logo"></a>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="eventshowcase.html">Event Showcase</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+  <div class="overlay">
+    <div class="content-wrapper">
+      <div class="heading">
+        <h1>Movie Event</h1>
+        <p>
+          Plan your corporate movie night with luxury seating, snacks, and private screenings.
+          We provide personalized setups, red-carpet themes, and live commentary options to
+          make your movie event unforgettable.
+        </p>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h2>Book Now</h2>
+      <form action="https://formspree.io/f/xeokweva" method="POST">
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="number">Your Number:</label>
+          <input type="text" id="number" name="number" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="location">Location:</label>
+          <select id="location" name="location" required>
+            <option value="">--Select location--</option>
+            <option>Ramoji Film City, Hyderabad</option>
+            <option>Film City, Mumbai</option>
+            <option>Chitranjali Studio, Thiruvananthapuram</option>
+            <option>AVM Studios, Chennai</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Event Date:</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="budget">Budget:</label>
+          <select id="budget" name="budget" required>
+            <option value="">--Select Budget--</option>
+            <option>Under ₹50,000</option>
+            <option>₹50,000 - ₹1,00,000</option>
+            <option>₹1,00,000 - ₹2,00,000</option>
+            <option>Above ₹2,00,000</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Additional Services:</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="services" value="Catering"> Catering</label>
+            <label><input type="checkbox" name="services" value="Photography"> Photography</label>
+            <label><input type="checkbox" name="services" value="Decor"> Decor</label>
+            <label><input type="checkbox" name="services" value="Entertainment"> Entertainment</label>
+            <label><input type="checkbox" name="services" value="Makeup"> Makeup</label>
+            <label><input type="checkbox" name="services" value="Transportation"> Transportation</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit">Send Request</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="bottom-section">
+      <div class="services-section">
+        <h2>Our Services</h2>
+        <ul class="services-list">
+          <li>Private Movie Screenings</li>
+          <li>Red Carpet Setup</li>
+          <li>Themed Venue Decoration</li>
+          <li>Luxury Seating Arrangements</li>
+          <li>Customized Snack Boxes</li>
+          <li>Live Commentary or Q&A</li>
+          <li>Branding & Merchandise</li>
+        </ul>
+      </div>
+      <div class="location-section">
+        <h2>📍 Location</h2>
+        <p class="location-text">
+          📍 Ramoji Film City, Hyderabad<br>
+          📍 Film City, Mumbai<br>
+          📍 Chitranjali Studio, Thiruvananthapuram<br>
+          📍 AVM Studios, Chennai
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

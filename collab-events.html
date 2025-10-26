@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collab Event</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      background: #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #8b0000;
+      padding: 0.5rem 1rem;
+    }
+
+    .logo img {
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      position: relative;
+      padding: 10px;
+    }
+
+    .navbar a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: white;
+      bottom: 0;
+      left: 0;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover::after {
+      width: 100%;
+    }
+
+    #bg-section {
+      background: url('collab.jpg') no-repeat center center/cover;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      padding: 3rem;
+    }
+
+    #bg-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .text-content,
+    .form-container {
+      position: relative;
+      z-index: 2;
+      width: 48%;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .text-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #ffd700;
+    }
+
+    .text-content p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .form-container h2 {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .form-container form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, select {
+      padding: 10px;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: none;
+    }
+
+    input[type="submit"] {
+      background-color: #2980b9;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #3498db;
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .checkbox-group label {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 1000px) {
+      #bg-section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+      }
+
+      .text-content, .form-container {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo"><img src="logo.jpg" alt="Logo"></a>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="Events.html" class="active">Events</a></li>
+      <li><a href="Booking.html">Booking</a></li>
+      <li><a href="Reviews.html">Reviews</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <section id="bg-section">
+    <div class="text-content">
+      <h1>Collab Event</h1>
+      <p>Host a high-impact collaboration night filled with meaningful networking, thought-provoking discussions, and vibrant ambiance. Whether it's a startup mixer, innovation showcase, or community gathering — our team ensures an unforgettable experience with tech, branding, and hospitality support.</p>
+      <p>From concept to execution, we tailor each collaboration to reflect your brand's identity and objectives. Our team manages logistics, media, and creative production so you can focus on what matters — building valuable relationships and sharing great ideas.</p>
+    </div>
+
+    <div class="form-container">
+      <h2>Book Now</h2>
+      <form action="https://formspree.io/f/xeokweva" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <label for="number">Phone:</label>
+        <input type="text" name="number" placeholder="Your Number" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Email" required>
+
+        <label for="guests">No.of Guests:</label>
+        <input type="number" name="guests" placeholder="No. of Guests" min="1" required>
+
+        <label for="location">Location: </label>
+        <select name="location" required>
+          <option value="">--Select Location--</option>
+          <option>Jio World Convention Centre, Mumbai</option>
+          <option>India Habitat Centre, New Delhi</option>
+          <option>The Forum Art Gallery, Chennai</option>
+          <option>Shilparamam Cultural Village, Hyderabad</option>
+        </select>
+
+        <label for="date">Event date:</label>
+        <input type="datetime-local" id="eventDate" name="eventDate" required>
+
+        <label for="budget">Budget:</label>
+        <select name="budget" required>
+          <option value="">--Select Budget--</option>
+          <option>Under ₹50,000</option>
+          <option>₹50,000 - ₹1,00,000</option>
+          <option>₹1,00,000 - ₹2,00,000</option>
+          <option>Above ₹2,00,000</option>
+        </select>
+        
+        <label >Additional Services:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="services" value="Branding"> Branding</label>
+          <label><input type="checkbox" name="services" value="Networking"> Networking</label>
+          <label><input type="checkbox" name="services" value="Tech"> Tech</label>
+          <label><input type="checkbox" name="services" value="Stage"> Stage</label>
+          <label><input type="checkbox" name="services" value="Photos"> Photos</label>
+          <label><input type="checkbox" name="services" value="Food"> Food</label>
+        </div>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </section>
+</body>
+</html>

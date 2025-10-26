@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weddings</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="logo.jpg" alt="Business logo" />
+    </a>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="Events.html">Events</a></li>
+        <li><a href="eventshowcase.html">Event Showcase</a></li>
+        <li><a href="Reviews.html">Reviews</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+<video autoplay muted loop id="bgVideo">
+  <source src="aniversary.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+ 
+  <section class="anniversary-Home" id="anniversary-Home">
+    <div class="text">
+      <h1><span>Anniversary</span></h1> <br><br>
+      <p>At Sambhavan, we make destination weddings effortless and elegant. From finding 
+        your dream venue to handling décor, guest travel, rituals, catering, and entertainment, 
+        we take care of everything. Whether it’s a beach in Goa, a palace in Udaipur, or a hilltop 
+        in Mussoorie, our expert team ensures a smooth, personalized celebration—just the way you 
+        imagined.
+      <br><br>Take a glimpse into our past celebrations by visiting our <a href="eventshowcase.html#event-showcase" style="color: #ffd700; font-weight: bold;">Event Showcase</a>
+    </div>
+    <div class="form-container">
+      <h2>Let’s Plan Your Special Day</h2>
+      <form action="https://formspree.io/f/xeokweva" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="number" name="phone" placeholder="Your Phone" required>
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Your Email" required>
+
+         <br><br>
+
+         <label for="location">Select Location:</label>
+        <select id="location">
+        <option value="" disabled selected>Choose a location</option>
+          <option value="hyderabad">Hyderabad</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="delhi">Delhi</option>
+          <option value="vizag">Vizag</option>
+        </select>
+
+        <br><br>
+
+        <label for="people-count">Estimated Guest Count:</label>
+        <input type="number" name="people-count" placeholder="e.g. 100" required></input>
+
+        <br><br>
+
+        <label for="budget">Budget Range:</label>
+        <select id="budget">
+          <option value="" disabled selected>Select Budget Range</option>
+          <option value="low">Under 5000</option>
+          <option value="medium">5000 - 10000</option>
+          <option value="high">Over 10000</option>
+        </select>
+        
+        <br><br>
+
+        <label for="event-date">Choose Event Date:</label>
+        <input type="date" id="event-date" name="event-date" required>
+
+        <br><br>
+
+         <div class="checkbox-group">
+  <label><strong>Additional Services Required:</strong></label><br><br>
+
+  <div class="checkbox-item">
+    <input type="checkbox" id="catering" name="services" value="Catering">
+    <label for="catering">Catering</label>
+  </div>
+
+  <div class="checkbox-item">
+    <input type="checkbox" id="photography" name="services" value="Photography">
+    <label for="photography">Photography</label>
+  </div>
+
+  <div class="checkbox-item">
+    <input type="checkbox" id="decor" name="services" value="Decor">
+    <label for="decor">Event Decor</label>
+  </div>
+
+  <div class="checkbox-item">
+    <input type="checkbox" id="custom cake" name="services" value="Cake">
+    <label for="custom cake">Makeup & Cake</label>
+  </div>
+
+  <div class="checkbox-item">
+    <input type="checkbox" id="entertainment" name="services" value="Entertainment">
+    <label for="entertainment">Entertainment</label>
+  </div>
+
+  <div class="checkbox-item">
+    <input type="checkbox" id="transport" name="services" value="Guest Transport">
+    <label for="transport">Guest Transportation</label>
+  </div>
+
+  <div class="checkbox-item">
+    <input type="checkbox" id="Theme" name="services" value="Theme decoration">
+    <label for="accommodation">Theme decoration</label>
+  </div>
+
+  <div class="checkbox-item">
+    <input type="checkbox" id="other" name="services" value="Other">
+    <label for="other">Other (Please specify in notes)</label>
+  </div>
+</div>
+         <br><br>
+
+         <label for="preferred-contact">Preferred Contact Method</label>
+         <select id="preferred-contact" name="preferred-contact">
+          <option value="" disabled selected>Choose a method</option>
+          <option value="email">Email</option>
+          <option value="phone">Phone</option>
+          <option value="whatsapp">WhatsApp</option>
+         </select>
+
+         <br><br>
+
+         <label for="other-notes">Anything else you would like us to help with:</label>
+         <input type="text" name="other-notes" rows="3" placeholder="Add any notes, special instructions, or concerns here...">
+
+         <br><br>
+
+         <button type="submit">Send Request</button>
+
+         <div id="successMessage" style="display: none; padding: 15px; margin-top: 20px; background-color: #d4edda; color: #155724; border-radius: 5px; border: 1px solid #c3e6cb;">
+         ✅ Request sent successfully! We will contact you shortly.
+         </div>
+
+      </form>
+    </div>
+  </section>
+  
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf0;
+  color: #333;
+}
+
+/* Header & Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8b0000;
+  padding: 0.5rem 1rem;
+}
+
+.logo img {
+  border-radius: 50%;
+  height: 60px;
+  width: auto;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar a{
+  font-weight: 600;
+  padding:10px 20px;
+  font-size: 1rem;
+  text-decoration:none;
+  color:#fff;
+  transition:0.3s;
+  position:relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+    .anniversary-Home {
+      
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      padding: 3rem;
+      color: white;
+    }
+
+    .anniversary-Home::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      
+      z-index: 1;
+    }
+
+    .anniversary-Home .text, 
+    .anniversary-Home .form-container {
+      position: relative;
+      z-index: 2;
+      width: 48%;
+      padding: 2rem;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    .form-container form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-container h2{
+      font-size: 3rem;
+      color:#8b0000;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    select {
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.2);
+      margin-right: 8px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    
+
+    button[type="submit"] {
+      padding: 12px;
+      font-size: 1rem;
+      background-color: #8b0000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #a30000;
+    }
+
+    h1 span {
+      font-size: 5rem;
+      color: #fff;
+    }
+
+    @media (max-width: 1000px) {
+      .anniversary-Home {
+        flex-direction: column;
+        padding: 2rem 1rem;
+      }
+
+      .anniversary-Home .text,
+      .anniversary-Home .form-container {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
+</style>

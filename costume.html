@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Costume Party</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('giphy.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8b0000;
+  padding: 0.5rem 1rem;
+}
+
+.logo img {
+  border-radius: 50%;
+  height: 60px;
+  width: auto;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar a{
+  font-weight: 600;
+  padding:10px 20px;
+  font-size: 1rem;
+  text-decoration:none;
+  color:#fff;
+  transition:0.3s;
+  position:relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+    .anniversary-Home {
+      
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      padding: 3rem;
+      color: white;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .top-center {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .top-center h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .top-center .description {
+      font-size: 18px;
+      line-height: 1.6;
+      text-shadow: 1px 1px 3px #000;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .Destination-Home {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 20px 0;
+    }
+
+    .form-container {
+      background-color: rgba(160, 128, 128, 0.1);
+      backdrop-filter: blur(8px);
+      border-radius: 10px;
+      padding: 2rem;
+      width: 48%;
+      color: #c49e9e;
+    }
+
+    .form-container h2 {
+      color: #ffcc00;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-container ul {
+      list-style: none;
+      padding-left: 0;
+      line-height: 1.8;
+    }
+
+    .form-container li {
+      font-size: 1.1rem;
+    }
+
+    .form-section {
+      background-color: #2130174e;
+      
+      color: #ffffff;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 40px auto;
+      border-radius: 10px;
+    }
+
+    .form-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+    }
+
+    button[type="submit"] {
+      background-color: #4b0082;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #5e2ca5;
+    }
+
+    @media (max-width: 768px) {
+      .top-center h1 {
+        font-size: 32px;
+      }
+
+      .top-center .description {
+        font-size: 16px;
+      }
+
+      .Destination-Home {
+        flex-direction: column;
+      }
+
+      .form-container {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <a href="index.html" class="logo">
+      <img src="logo.jpg" alt="Business logo" />
+    </a>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="Events.html">Events</a></li>
+        <li><a href="eventshowcase.html">Event Showcase</a></li>
+        <li><a href="Reviews.html">Reviews</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    </header>
+
+  <!-- Overlay wrapper -->
+  <div class="overlay">
+
+    <!-- Top section -->
+    <div class="top-center">
+      <h1>Costume Party Night</h1>
+      <div class="description">
+        <p>
+        Step into a world of fun, fantasy, and fabulous costumes! Our Costume Party is the ultimate celebration of creativity, colors, and character.
+        Whether you're a superhero, a ghost, or a glamorous star, this night promises laughter, lights, and lasting memories.
+        <br><br>Take a glimpse into our past celebrations by visiting our <a href="eventshowcase.html#event-showcase" style="color: #ffd700; font-weight: bold;">Event Showcase</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Activities and Locations -->
+    <div class="Destination-Home">
+      <!-- Activities -->
+      <div class="form-container">
+        <h2>Activities</h2>
+        <ul>
+          <li>Themed Venue & Decor</li>
+          <li>DJ & Dance Floor</li>
+          <li>Snacks & Mocktails</li>
+          <li>Costume Contest</li>
+          <li>Photo Booth & Props</li>
+          <li>Photography & Videography</li>
+          <li>Makeup & Styling Corners</li>
+        </ul>
+      </div>
+
+      <!-- Locations -->
+      <div class="form-container">
+        <h2>📌 Locations</h2>
+        <ul>
+          <li>📍Carnival Castle,Hyderabad,Telangana</li>
+          <li>📍Naughtyy Musketeers,Mumbai,Maharastra</li>
+          <li>📍Mahbliss Pines,Chennai,TamilNadu</li>
+          <li>📍The Costume Factory,Bangalore,Kartnataka</li>
+          <li>📍Awesome Party,Kolkata,WestBengal</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Form Section -->
+  <div class="form-section">
+    <h2>Book Your Costume Party</h2>
+    <form action="https://formspree.io/f/xeokweva" method="POST">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="📍location">Party Location:</label>
+      <select id="location" name="location" required>
+        <option value="">Select your location</option>
+        <option value="Hyd">Carnival Castle,Hyderabad,Telangana</option>
+        <option value="Mum">Naughtyy Musketeers,Mumbai,Maharastra</option>
+        <option value="Chn">Mahbliss Pines,Chennai,TamilNadu</option>
+        <option value="Ban">The Costume Factory,Bangalore,Kartnataka</option>
+        <option value="Kol">Awesome Party,Kolkata,WestBengal</option>
+      </select>
+
+      <label for="guests">Estimated Guest Count:</label>
+      <input type="number" id="guests" name="guests" min="1" required>
+
+      <label for="eventDate">Event Date:</label>
+      <input type="datetime-local" id="eventDate" name="eventDate" required>
+
+      <label for="budget">Budget Range:</label>
+      <select id="budget" name="budget" required>
+        <option value="">Select your budget range</option>
+        <option value="1-3L">₹1,00,000 - ₹3,00,000</option>
+        <option value="3-5L">₹3,00,000 - ₹5,00,000</option>
+        <option value="5-10L">₹5,00,000 - ₹10,00,000</option>
+        <option value="10L+">₹10,00,000 and above</option>
+      </select>
+
+      <label>Additional Services:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="services" value="catering">Catering</label>
+        <label><input type="checkbox" name="services" value="photography">Photography</label>
+        <label><input type="checkbox" name="services" value="decor">Decor</label>
+        <label><input type="checkbox" name="services" value="entertainment">Entertainment</label>
+        <label><input type="checkbox" name="services" value="makeup">Makeup</label>
+        <label><input type="checkbox" name="services" value="transportation">Transportation</label>
+        <label><input type="checkbox" name="services" value="accommodation">Accommodation</label>
+      </div>
+
+      <label for="otherServices">Other services (please specify):</label>
+      <input type="text" id="otherServices" name="otherServices" placeholder="e.g., Mehendi artist, Invitation printing...">
+
+      <label>Preferred Contact Method:</label>
+      <div class="checkbox-group">
+        <label><input type="radio" name="contactMethod" value="phone" required>Phone</label>
+        <label><input type="radio" name="contactMethod" value="email" required>Email</label>
+      </div>
+
+      <label for="extraHelp">Anything else we can help with?</label>
+      <textarea id="extraHelp" name="extraHelp" rows="3" placeholder="Add any notes, special instructions, or concerns here..."></textarea>
+
+      <button type="submit">Send Request</button>
+    </form>
+  </div>
+
+  <!-- Script -->
+  <script>
+    document.getElementById('CostumepartyRequestForm').addEventListener('submit', function(event) {
+      const phone = document.getElementById('phone').value;
+      if (!/^[0-9]{10}$/.test(phone)) {
+        alert('Please enter a valid 10-digit phone number.');
+        event.preventDefault();
+      } else {
+        alert('Thank you for your booking! We will get in touch soon.');
+      }
+    });
+  </script>
+
+</body>
+</html>

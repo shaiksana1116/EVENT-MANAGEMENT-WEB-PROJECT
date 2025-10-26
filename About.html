@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <img src="logo.jpg" alt="Business logo" />
+    </a>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="Events.html">Events</a></li>
+        <li><a href="eventshowcase.html">Event Showcase</a></li>
+        <li><a href="Reviews.html">Reviews</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="Ananya.jpg" alt="Ananya" />
+      </div>
+      <div class="about-text">
+        <h2>Ananya Sharma</h2>
+        <p>
+          Ananya Sharma is the passionate founder of Sambhanvan, blending Indian tradition with 
+          modern innovation. After completing her MBA and working in corporate India, she started her 
+          business in 2016 with a vision to deliver quality and authenticity. <br><br>
+          Ananya is committed to empowering women, promoting sustainability, and giving back to her community.
+          Her journey is one of resilience, culture, and entrepreneurial spirit.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+<style>
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf0;
+  color: #333;
+}
+
+/* Header & Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8b0000;
+  padding: 0.5rem 1rem;
+}
+
+.logo img {
+  border-radius: 50%;
+  height: 60px;
+  width: auto;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar a{
+  font-weight: 600;
+  padding:10px 20px;
+  font-size: 1rem;
+  color:#fff;
+  transition:0.3s;
+  position:relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.about-image img:hover{
+  transform: scale(1.05);
+} 
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #8b0000;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+</style>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Indian Wedding</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf0;
+  color: #333;
+}
+
+/* Header & Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8b0000;
+  padding: 0.5rem 1rem;
+}
+
+.logo img {
+  border-radius: 50%;
+  height: 60px;
+  width: auto;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar a{
+  font-weight: 600;
+  padding:10px 20px;
+  font-size: 1rem;
+  text-decoration:none;
+  color:#fff;
+  transition:0.3s;
+  position:relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+        #bgVideo {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+        body{
+            width: 100%;
+            height: 100%;
+            
+            
+            background-repeat: no-repeat;
+            object-position: center;
+            object-fit: cover;
+        }
+        .north-wedding{
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        
+        }
+        .north-wedding::before{
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .text{
+            padding: 30px;
+            z-index: 2;
+            position: relative;
+            color: azure;
+        }
+        .text h1{
+            color: #f0803c;
+            width: 100%;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        .text p{
+            width: 100%;
+            text-align: center;
+            font-size: 17px;
+            line-height: 1.25;
+        }
+        /*.offer{
+            padding: 20px;
+        }*/
+        .north-wedding .offer{
+            z-index: 2;
+            position: relative;
+            padding: 30px;
+            color: #FFF;
+        }
+        .north-wedding .offer h2{
+            color: #f0803c;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 40px;
+            font-size: 35px;
+            font-weight: 300;
+        }
+        .north-wedding .offer a li{
+            list-style: none;
+            text-decoration: none;
+            color: #FFF;
+            line-height: 1.5;
+            
+        }
+        .north-wedding .offer a{
+            text-decoration: none;
+        }
+        .location {
+            width: 100%;
+            padding: 30px;
+        }
+        .location h2 {
+            color: #f0803c;
+            font-size: 30px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        .location li{
+            list-style: none;
+            line-height: 1.7;
+        }
+        .form-container {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            background: #2130174e;
+            border: 2px solid #f0803c;
+            border-radius: 0.5rem;
+        }
+        .form-container h2{
+            font-size: 35px;
+            color: #f0803c;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .form-container input{
+            border-radius: 0.3rem;
+            border: none;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 5px;
+            width: 100%;
+            color: #333;
+        }
+        .form-container label,
+        .form-container textarea
+        {
+            border-radius: 0.3rem;
+            border: none;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 5px;
+            width: 100%;
+            color: #fff;
+        }
+        .form-container select{
+            border-radius: 0.3rem;
+            border: none;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 5px;
+            width: 100%;
+            color: #4c1b1b;
+        }
+        .checkbox-group {
+            display: flex;
+        
+      gap: 5px;
+      margin-bottom: 12px;
+    }
+    .checkbox-group1{
+         display: flex;
+        
+      gap: 5px;
+      margin-bottom: 12px;
+    }
+    .checkbox-group2{
+        width: 140px;
+         display: flex;
+        
+      gap: 5px;
+      margin-bottom: 12px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background-color: rgba(255,255,255,0.1);
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+    .checkbox-group1 label{
+        font-weight: normal;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background-color: rgba(255,255,255,0.1);
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+    .checkbox-group2 label{
+        font-weight: normal;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background-color: rgba(255,255,255,0.1);
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+    .checkbox-group label{
+        background:#874646;
+    }
+    .checkbox-group1 label{
+        background-color: #874646;
+    }
+    .checkbox-group2 label{
+        background-color: #874646;
+    }
+    button{
+        background-color: #f0803c;
+        padding: 10px;
+        border: none;
+        color: #fff;
+        border-radius: 0.4rem;
+    }
+    button:hover{
+        transform: scale(1.05);
+        transition: 0.3s;
+    }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="bgVideo">
+  <source src="north-wedding.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+<header>
+    <a href="index.html" class="logo">
+      <img src="logo.jpg" alt="Business logo" />
+    </a>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="Events.html">Events</a></li>
+        <li><a href="eventshowcase.html">Event Showcase</a></li>
+        <li><a href="Reviews.html">Reviews</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+    <section class="north-wedding" id="north-wedding">
+        <div class="text">
+            <h1>North Indian Wedding</h1>
+            <p>Immerse yourself in the vibrant colors, rich traditions, and regal splendor of a North Indian wedding.From the soulful melodies of the shehnai to the dazzling bridal attire and majestic baraat,every moment is a symphony of joy and elegance. Lavish décor, opulent ceremonies, and heartwarming rituals come together to create an unforgettable celebration that blends heritage with glamour. </p><br>
+            Take a glimpse into our past celebrations by visiting our <a href="eventshowcase.html#event-showcase" style="color: #ffd700; font-weight: bold;">Event Showcase</a>
+            <div class="offer">
+            <h2>Services:</h2>
+            <ul>
+                <a href="#"><li>Pre-Wedding Ceremony</li></a>
+                <a href="#"><li>Venue & Decor`</li></a>
+                <a href="#"><li>Priest & Ritual Coordination</li></a>
+                <a href="#"><li>Baraat Arrangement</li></a>
+                <a href="#"><li>Bridal & Groom Styling</li></a>
+                <a href="#"><li>Food & Catering</li></a>
+                <a href="#"><li>Photography & Videography</li></a>
+            </ul>
+        </div>
+        <div class="location">
+            <h2>Available Locations:</h2>
+            <ul>
+                <li>Rambagh Palace, Jaipur, Rajasthan.</li>
+                <li>Oberoi Amarvilas, Agra, Delhi.</li>
+                <li>Wildflower Hall, Shimla/Manali, Himachal Pradesh.</li>
+                <li>heritage havelis, Lucknow, Bihar.</li>
+            </ul>
+        </div>
+        </div>
+        <div class="form-container">
+  <h2>Let's Plan Your Special Day</h2>
+  <form action="https://formspree.io/f/xeokweva" method="POST">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+
+    <label for="phone">Your Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter Your Number" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+    <label for="location">Location:</label>
+    <select name="location" id="location">>
+    <option value="select">--Select Location--</option>
+    <option value="Rambagh">Rambagh Palace</option>
+    <option value="oberoi">Oberoi Amarvelis</option>
+    <option value="wildflower">Wildflower Hall</option>
+    <option value="heritage">Heritage havelis</option>
+    </select>
+
+    <label for="guest">Estimated Guest Count:</label>
+    <input type="number" id="guest" name="guest" placeholder="Approximate number of guests">
+
+    <label for="event-date">Event Date:</label>
+    <input type="date" id="event-date" name="event-date">
+
+    <label for="budget">Budget:</label>
+    <select name="budget" id="budget">
+      <option value="">--Select Budget Range--</option>
+      <option value="under5L">Under 5 Lakhs</option>
+      <option value="5-10L">5-10 Lakhs</option>
+      <option value="10-20L">10-20 Lakhs</option>
+      <option value="above20L">Above 20 Lakhs</option>
+    </select>
+
+    <label>Additional Services:</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="services" value="catering"> Catering</label>
+      <label><input type="checkbox" name="services" value="photography"> Photography</label>
+      <label><input type="checkbox" name="services" value="decor"> Decor</label>
+    </div>
+    <div class="checkbox-group1">
+        <label><input type="checkbox" name="services" value="entertainment"> Entertainment</label>
+        <label><input type="checkbox" name="services" value="makeup"> Makeup</label>
+        <label><input type="checkbox" name="services" value="transportation"> Transportation</label>
+    </div>
+    <div class="checkbox-group2">
+      <label><input type="checkbox" name="services" value="accommodation"> Accommodation</label>
+    </div>
+
+    <label for="otherServices">Other services (please specify):</label>
+    <input type="text" id="otherServices" name="otherServices" placeholder="e.g., Mehendi artist, Invitation printing...">
+
+    <label>Preferred Contact Method:</label>
+    <div class="checkbox-group">
+      <label><input type="radio" name="contactMethod" value="phone" required> Phone</label>
+      <label><input type="radio" name="contactMethod" value="email"> Email</label>
+    </div>
+
+    <label for="extraHelp">Anything else we can help with?</label>
+    <textarea id="extraHelp" name="extraHelp" rows="3" placeholder="Add any notes, special instructions, or concerns here..."></textarea>
+
+    <button type="submit">Send Request</button>
+  </form>
+</div>
+
+    </section>
+</body>
+</html>

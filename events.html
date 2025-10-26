@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    *{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    background-color: #8b0000;
+    color: #fff;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 10px;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+}
+.navbar{
+  display: flex;
+  gap: 10px;
+}
+
+.navbar a{
+    width: 400px;
+  font-weight: 600;
+  padding:10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  transition:0.3s;
+  position:relative;
+}
+
+.navbar li{
+    list-style: none;
+  position:relative;
+}
+
+.navbar a::after{
+  content:"";
+  width:0;
+  height:3px;
+  bottom:-4px;
+  background-color: #8b0000;
+  position:absolute;
+  left:0;
+  transition:0.5s;
+}
+
+.navbar a:hover::after{
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo img{
+  border-radius: 50%;
+  height:100px;
+  width:auto;
+  
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navbar a{
+  font-weight: 600;
+  padding:10px 20px;
+  font-size: 1rem;
+  color:#fff;
+  transition:0.3s;
+  position:relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fff;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .box {
+            margin-top: 30px;
+            background: #dcdcdc;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 28px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            min-height: 300px;
+            align-items: flex-start;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .box:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+        .box h2 {
+            text-align: center;
+            margin: 0 0 18px 0;
+            font-size: 1.6rem;
+            color: #8b0000;
+            letter-spacing: 0.5px;
+        }
+        .box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        
+        .box ul li {
+            background-color: #fff;
+            margin-bottom: 12px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            color: #000;
+            font-size: 1.05rem;
+            transition: background 0.2s;
+        }
+        .box ul li:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+        .box ul li:last-child {
+            margin-bottom: 0;
+        }
+        @media (max-width: 1000px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+            }
+        }
+
+        .box ul li a {
+           color: inherit;
+           text-decoration: none;
+           display: block;
+}
+    </style>
+</head>
+<body>
+    <header>
+    <a href="#" class="logo">
+        <img src="logo.jpg" alt="Business logo">
+    </a>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Events.html"  class="active">Events</a></li>
+        <li><a href="eventshowcase.html">Event Showcase</a></li>
+        <li><a href="Reviews.html">Reviews</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+  </header>
+    <div class="container">
+        <div class="box">
+            <h2>Wedding</h2>
+            <ul>
+                 <li><a href="northwedding.html" target="_blank">North Indian Wedding</a></li>
+                 <li><a href="Southindianwedding.html" target="_blank">South Indian Wedding</a></li>
+                 <li><a href="destwedding.html" target="_blank">Destination Wedding</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <h2>Theme Parties</h2>
+            <ul>
+                 <li><a href="birthday.html" target="_blank">Birthday Party</a></li>
+                 <li><a href="costume.html" target="_blank">Costume Parties</a></li>
+                 <li><a href="anniversary.html" target="_blank">Anniversary Parties</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <h2>Corporate</h2>
+           <ul>
+                 <li><a href="movie-events.html" target="_blank">Movie Events</a></li>
+                 <li><a href="collab-events.html" target="_blank">Collab Events</a></li>
+                 <li><a href="startup-events.html" target="_blank">Startup Events</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
